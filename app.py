@@ -233,12 +233,10 @@ with col_summary:
     </div>
     """
 
-    st.markdown(f"""
-    <div class="price-card">
-        <h3>Booking estimate</h3>
-        {rows_html}
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        '<div class="price-card"><h3>Booking estimate</h3>' + rows_html + '</div>',
+        unsafe_allow_html=True
+    )
 
     if nights == 0:
         st.caption("⚠️ Check-out must be after check-in.")
